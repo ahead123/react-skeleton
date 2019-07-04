@@ -4,7 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "watchify src/main.jsx -v -t [ babelify -- presets [ react ] ] -o public/js/main.js"
+    "start": "watchify src/main.jsx -v -t [ babelify -- presets [ react ] ] -o public/js/main.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,8 @@
     "babelify": "^7.2.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
-    "watchify": "^3.7.0"
-  }
+    "watchify": "^3.7.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
